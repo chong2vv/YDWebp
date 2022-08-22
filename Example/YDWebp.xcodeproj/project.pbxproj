@@ -38,6 +38,11 @@
 
 /* Begin PBXFileReference section */
 		02A2A2077F953E6B372B65A5 /* Pods-YDWebp_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDWebp_Example.debug.xcconfig"; path = "Target Support Files/Pods-YDWebp_Example/Pods-YDWebp_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		15E5C33528B3701A0099A643 /* CGImage+YDWebp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGImage+YDWebp.h"; sourceTree = "<group>"; };
+		15E5C33628B3701A0099A643 /* CGImage+YDWebp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CGImage+YDWebp.m"; sourceTree = "<group>"; };
+		15E5C33728B372600099A643 /* UIImage+YDWebp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+YDWebp.h"; sourceTree = "<group>"; };
+		15E5C33828B372600099A643 /* UIImage+YDWebp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YDWebp.m"; sourceTree = "<group>"; };
+		15E5C33928B3736C0099A643 /* YDWebp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDWebp.h; sourceTree = "<group>"; };
 		5EB3FDD6E736EF86869E8253 /* Pods_YDWebp_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDWebp_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* YDWebp_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDWebp_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,12 +66,12 @@
 		6BEBFCBCFF907C978C626680 /* Pods-YDWebp_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDWebp_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YDWebp_Tests/Pods-YDWebp_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B5939A66B6555B3BED00B2 /* Pods-YDWebp_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDWebp_Tests.release.xcconfig"; path = "Target Support Files/Pods-YDWebp_Tests/Pods-YDWebp_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7D15A69A1526387BC74E8B5A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7D15A69A1526387BC74E8B5A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7DE8BE11C2C13240E8379C6C /* Pods_YDWebp_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDWebp_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83EB63C295721EAC34C725FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		83EB63C295721EAC34C725FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E80C361B3A2487BE3CC43865 /* Pods-YDWebp_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDWebp_Example.release.xcconfig"; path = "Target Support Files/Pods-YDWebp_Example/Pods-YDWebp_Example.release.xcconfig"; sourceTree = "<group>"; };
-		ED9EBD25D32B6C7C6D59656A /* YDWebp.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YDWebp.podspec; path = ../YDWebp.podspec; sourceTree = "<group>"; };
+		ED9EBD25D32B6C7C6D59656A /* YDWebp.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YDWebp.podspec; path = ../YDWebp.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +100,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15E5C32D28B36F4C0099A643 /* YDWebp */ = {
+			isa = PBXGroup;
+			children = (
+				15E5C32E28B36F4C0099A643 /* Classes */,
+				15E5C33128B36F4C0099A643 /* Assets */,
+			);
+			name = YDWebp;
+			path = ../YDWebp;
+			sourceTree = "<group>";
+		};
+		15E5C32E28B36F4C0099A643 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				15E5C33528B3701A0099A643 /* CGImage+YDWebp.h */,
+				15E5C33628B3701A0099A643 /* CGImage+YDWebp.m */,
+				15E5C33728B372600099A643 /* UIImage+YDWebp.h */,
+				15E5C33828B372600099A643 /* UIImage+YDWebp.m */,
+				15E5C33928B3736C0099A643 /* YDWebp.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		15E5C33128B36F4C0099A643 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				15E5C32D28B36F4C0099A643 /* YDWebp */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for YDWebp */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -193,7 +228,6 @@
 				6BEBFCBCFF907C978C626680 /* Pods-YDWebp_Tests.debug.xcconfig */,
 				73B5939A66B6555B3BED00B2 /* Pods-YDWebp_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +293,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -326,10 +361,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YDWebp_Example/Pods-YDWebp_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/YDWebp/YDWebp.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YDWebp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
