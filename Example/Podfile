@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'YDWebp_Example' do
+  pod 'YDWebp', :path => '../'
+
+  target 'YDWebp_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
